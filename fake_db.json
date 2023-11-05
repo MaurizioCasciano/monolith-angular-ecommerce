@@ -1,0 +1,115 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "alice",
+      "email": "alice@example.com",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "username": "bob",
+      "email": "bob@example.com",
+      "password": "password456"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "description": "15 inch, 8GB RAM, 256GB SSD",
+      "price": 1000
+    },
+    {
+      "id": 2,
+      "name": "Smartphone",
+      "description": "6 inch, 4GB RAM, 64GB Storage",
+      "price": 500
+    },
+    {
+      "id": 3,
+      "name": "Smartwatch",
+      "description": "Water-resistant, 40mm, GPS",
+      "price": 250
+    },
+    {
+      "id": 4,
+      "name": "Bluetooth Headphones",
+      "description": "Over-ear, Noise-cancelling, 20-hour battery life",
+      "price": 150
+    },
+    {
+      "id": 5,
+      "name": "Gaming Console",
+      "description": "1TB, includes 2 controllers",
+      "price": 400
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "status": "shipped",
+      "createdAt": "2023-10-13T12:00:00.000Z",
+      "price": 27.99
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "status": "processing",
+      "createdAt": "2023-09-01T12:00:00.000Z",
+      "price": 19.99
+    },
+    {
+      "userId": 1,
+      "price": 4000,
+      "status": "processing",
+      "createdAt": "2023-11-05T07:36:55.915Z",
+      "id": 3
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productId": 1,
+      "rating": 4,
+      "comment": "Great laptop!"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "productId": 2,
+      "rating": 5,
+      "comment": "Amazing phone for its price!"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "productId": 3,
+      "rating": 3,
+      "comment": "Decent smartwatch, but battery life could be better."
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "productId": 4,
+      "rating": 5,
+      "comment": "Love these headphones! Sound quality is top-notch."
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "productId": 5,
+      "rating": 4,
+      "comment": "Good gaming experience, but the setup was a bit tricky."
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "productId": 5,
+      "rating": 5,
+      "comment": "Best gaming console I've ever owned!"
+    }
+  ]
+}

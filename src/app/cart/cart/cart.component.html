@@ -1,0 +1,19 @@
+<h1>Your cart</h1>
+
+<div *ngIf="items()!.length > 0; else emptyCart">
+    <mat-list>
+        <mat-list-item *ngFor="let item of items()">
+            <span matListItemTitle>{{ item.name }}</span>
+            <span matListItemLine>{{ item.price | currency:'EUR' }}</span>
+        </mat-list-item>
+    </mat-list>
+    <div>
+        <h3>Total: {{ total() | currency:'EUR' }}</h3>
+    </div>
+
+    <button mat-raised-button color="primary" (click)="createOrder()">Place order</button>
+</div>
+
+<ng-template #emptyCart>
+    <p>Your cart is empty</p>
+</ng-template>
