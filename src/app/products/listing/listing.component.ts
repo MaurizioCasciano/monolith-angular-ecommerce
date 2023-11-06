@@ -30,7 +30,7 @@ import { Product } from '../models';
 })
 export default class ListingComponent {
   private readonly _cart = inject(CartService);
-  items = toSignal(inject(ProductService).products$)
+  readonly items = toSignal(inject(ProductService).products$)
 
   addToCart(item: Product) {
     this._cart.addToCart(item);

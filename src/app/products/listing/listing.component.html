@@ -1,4 +1,4 @@
-<div class="items">
+<div class="items" *ngIf="items()">
     <mat-card class="item" *ngFor="let item of items()">
         <mat-card-header>
             <mat-card-title>{{ item.name }}</mat-card-title>

@@ -38,7 +38,7 @@ export class NavigationComponent {
   readonly isLoggedIn$ = this._auth.isLoggedIn$;
   readonly itemsCount = toSignal(this._cart.itemsCount$)
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  readonly isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()

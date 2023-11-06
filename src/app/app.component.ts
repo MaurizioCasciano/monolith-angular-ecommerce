@@ -11,5 +11,4 @@ import { NavigationComponent } from './navigation/navigation.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'shoppy';
 }

@@ -15,5 +15,4 @@ import { MatListModule } from '@angular/material/list';
 })
 export default class OrdersComponent {
   readonly items = toSignal(inject(OrderService).orders$);
-
 }
