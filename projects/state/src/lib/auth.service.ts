@@ -3,28 +3,26 @@ import { Injectable, inject } from '@angular/core';
 import { BehaviorSubject, Observable, map, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from '../../../../src/app/models';
+import {StateService} from "./state.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private readonly isLoggedIn = new BehaviorSubject(false);
+
   private readonly client = inject(HttpClient);
+  private readonly state = inject(StateService);
 
   constructor() {
     const userId = window.localStorage.getItem('userId');
-    this.isLoggedIn.next(!!userId);
-  }
-
-  get isLoggedIn$() {
-    return this.isLoggedIn.asObservable();
+    this.state.logged = !!userId;
   }
 
   login(email: string, password: string): Observable<boolean> {
     return this.client.get<User[]>(`${environment.api}/users?email=${email}&password=${password}`).pipe(
       map((users) => {
         const isSuccess = users.length === 1;
-        this.isLoggedIn.next(isSuccess);
+        this.state.logged = isSuccess;
         return { isSuccess, user: users[0] };
       }),
       tap(({ isSuccess, user }) => {
@@ -40,7 +38,7 @@ export class AuthService {
   }
 
   logout() {
-    this.isLoggedIn.next(false);
+    this.state.logged = false;
     window.localStorage.removeItem('username');
     window.localStorage.removeItem('userId');
   }
