@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Order } from './models';
-import { Product } from 'src/app/products/models';
+import { Product } from 'projects/products/src/app/models';
 import { NotifierService } from 'src/app/notifications/notifier.service';
 import { tap } from 'rxjs';
 

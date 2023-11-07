@@ -9,7 +9,7 @@ import { CartService } from 'src/app/cart/cart.service';
 import { Product } from '../models';
 
 @Component({
-  selector: 'app-listing',
+  selector: 'products-listing',
   standalone: true,
   imports: [CommonModule, MatCardModule, MatIconModule, MatButtonModule],
   templateUrl: './listing.component.html',

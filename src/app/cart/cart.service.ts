@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Product } from '../products/models';
+import { Product } from '../../../projects/products/src/app/models';
 import { NotifierService } from '../notifications/notifier.service';
 import { BehaviorSubject, map } from 'rxjs';
 
