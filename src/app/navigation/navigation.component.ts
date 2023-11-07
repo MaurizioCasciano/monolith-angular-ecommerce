@@ -12,6 +12,7 @@ import { AuthService } from '../../../projects/state/src/lib/auth.service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { CartService } from '../cart/cart.service';
+import {StateService} from "../../../projects/state/src/lib/state.service";
 
 @Component({
   selector: 'app-navigation',
@@ -33,9 +34,10 @@ import { CartService } from '../cart/cart.service';
 export class NavigationComponent {
   private breakpointObserver = inject(BreakpointObserver);
   private readonly _auth = inject(AuthService);
+  private readonly _state = inject(StateService);
   private readonly _cart = inject(CartService);
 
-  readonly isLoggedIn$ = this._auth.isLoggedIn$;
+  readonly isLoggedIn$ = this._state.isLoggedIn$;
   readonly itemsCount = toSignal(this._cart.itemsCount$)
 
   readonly isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
