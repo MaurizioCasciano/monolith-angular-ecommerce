@@ -5,9 +5,9 @@ import { CommonModule } from '@angular/common';
   selector: 'products-root',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './products-app.component.html',
+  styleUrls: ['./products-app.component.css']
 })
-export class AppComponent {
+export class ProductsAppComponent {
   title = 'products';
 }
