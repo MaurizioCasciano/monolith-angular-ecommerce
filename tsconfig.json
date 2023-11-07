@@ -19,7 +19,6 @@
     "target": "ES2022",
     "paths": {
       "state": [
-        "dist/state",
         "dist/state"
       ]
     },
