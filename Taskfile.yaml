@@ -1,0 +1,6 @@
+version: 3
+
+tasks:
+  state-library:
+    cmds:
+      - ng g library state --standalone
