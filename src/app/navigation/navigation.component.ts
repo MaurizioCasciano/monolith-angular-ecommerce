@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from '../../../projects/state/src/lib/auth.service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { CartService } from '../cart/cart.service';

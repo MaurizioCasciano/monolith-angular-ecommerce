@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AuthService } from './auth.service';
+import { AuthService } from '../../../projects/state/src/lib/auth.service';
 import { MatButtonModule } from '@angular/material/button';
 import { NotifierService } from '../notifications/notifier.service';
 import { Router, RouterModule } from '@angular/router';
@@ -33,7 +33,7 @@ import { finalize } from 'rxjs';
         <mat-label>Password</mat-label>
         <input type="password" matInput placeholder="Your password" formControlName="password">
         <mat-icon matSuffix>password</mat-icon>
-        
+
       </mat-form-field>
 
       <button mat-raised-button color="primary" [disabled]="form.invalid || posting()">Login</button>
@@ -45,7 +45,7 @@ import { finalize } from 'rxjs';
       display: flex;
       flex-direction: column;
       padding: 0 10vw;
-    } 
+    }
     `
   ]
 })
