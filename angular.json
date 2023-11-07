@@ -166,7 +166,7 @@
       },
       "root": "projects/products",
       "sourceRoot": "projects/products/src",
-      "prefix": "app",
+      "prefix": "products",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
