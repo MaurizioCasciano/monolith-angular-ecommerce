@@ -1,6 +1,9 @@
 version: 3
 
 tasks:
-  state-library:
+  state-lib:
     cmds:
       - ng g library state --standalone
+  products-app:
+    cmds:
+      - ng g application products --standalone
